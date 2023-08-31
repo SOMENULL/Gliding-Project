@@ -33,8 +33,8 @@ public class CameraTracking : MonoBehaviour
     }
     private void CameraRotation()
     {
-        mouseX += Input.GetAxisRaw("Mouse Y") * Time.deltaTime * Sensitivity;
-        mouseY += Input.GetAxisRaw("Mouse X") * Time.deltaTime * Sensitivity;
+        mouseX += Input.GetAxisRaw("Mouse Y") * Sensitivity;
+        mouseY += Input.GetAxisRaw("Mouse X") * Sensitivity;
         float clampedX = Mathf.Clamp(mouseX, -MaxViewRange, MaxViewRange);
 
         Quaternion targetRotation = Quaternion.Euler(clampedX, mouseY, transform.eulerAngles.z);
