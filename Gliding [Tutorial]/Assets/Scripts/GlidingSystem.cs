@@ -69,7 +69,7 @@ public class GlidingSystem : MonoBehaviour
     private void ManageRotation() 
     {
         float mouseX = Input.GetAxis("Mouse X");
-        TiltValue += mouseX * TiltStrength * Time.deltaTime;
+        TiltValue += mouseX * TiltStrength;
 
         if (mouseX == 0)
         {
